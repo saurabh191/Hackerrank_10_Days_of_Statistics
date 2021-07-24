@@ -22,15 +22,15 @@ def median(arr):
         median = (nby2_elem + nby2plus1_elem)//2
     else:
         median = arr[n//2]
-
     return median   
 
 def quartiles(arr):
     sortedArr = sorted(arr)
     q2 = median(sortedArr)
     q1 = median(sortedArr[0:len(sortedArr)//2])
-    q3 = median(sortedArr[len(sortedArr)//2:])
+    q3 = median(sortedArr[(len(sortedArr)//2)+1:])
     return q1,q2,q3
+
 
 if __name__ == '__main__':
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
